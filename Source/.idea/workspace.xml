@@ -40,6 +40,7 @@
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -53,7 +54,7 @@
       <updated>1593744264123</updated>
       <workItem from="1593744265765" duration="1294000" />
       <workItem from="1593784279143" duration="659000" />
-      <workItem from="1593802376010" duration="253000" />
+      <workItem from="1593802376010" duration="5987000" />
     </task>
     <servers />
   </component>
@@ -77,5 +78,9 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="499" y="194" key="#Notifications/0.0.1280.720@0.0.1280.720" timestamp="1593744744624" />
+    <state x="33" y="0" key="SettingsEditor" timestamp="1593803589510">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="33" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1593803589510" />
   </component>
 </project>
