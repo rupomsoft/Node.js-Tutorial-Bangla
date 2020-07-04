@@ -1,27 +1,26 @@
 var http=require('http');
+var URL=require('url');
+
 
 var server=http.createServer(function (req,res) {
 
-        if(req.url=="/"){
-            res.writeHead(200,{'Content-Type':'text/html'})
-            res.write('<h1>This is Home Page</h1>')
-            res.end();
+  var myURL="http://rabbil.com/blog.html?year=2020&month=july";
 
-        }
-        else if(req.url=="/about"){
-            res.writeHead(200,{'Content-Type':'text/html'})
-            res.write('<h1>This is About Page</h1>')
-            res.end();
-        }
+  var  myURLObj= URL.parse(myURL,true);
 
-        else if(req.url=="/contact"){
-            res.writeHead(200,{'Content-Type':'text/html'})
-            res.write('<h1>This is Contact Page</h1>')
-            res.end();
-        }
+  var myHostName=myURLObj.host;
+  var myPathName=myURLObj.pathname;
+  var mySearchName=myURLObj.search;
+
+    res.writeHead(200,{'Content-Type':'text/html'})
+    res.write(mySearchName);
+    res.end();
 
 
 });
 
 server.listen(5050);
 console.log("Server Run Success");
+
+
+
