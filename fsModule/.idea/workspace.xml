@@ -48,6 +48,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -68,6 +69,8 @@
       <workItem from="1594570832144" duration="3294000" />
       <workItem from="1597990773551" duration="3847000" />
       <workItem from="1598012428223" duration="55000" />
+      <workItem from="1600174686176" duration="55000" />
+      <workItem from="1600174749423" duration="4194000" />
     </task>
     <servers />
   </component>

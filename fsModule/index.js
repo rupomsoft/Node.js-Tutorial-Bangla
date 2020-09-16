@@ -6,24 +6,22 @@ var server=http.createServer(function (req,res) {
 
     if(req.url=="/"){
 
+      let error=  fs.unlinkSync('Home.html')
 
-       let error= fs.writeFileSync('demoSync.txt','Welcome to File Sync');
-
-        if(error){
-            res.writeHead(200,{'Content-Type':'text/html'});
-            res.write("File Write Fail");
-            res.end();
-        }
-        else{
-            res.writeHead(200,{'Content-Type':'text/html'});
-            res.write("File Write Success");
-            res.end();
-        }
-
-
-
+            if(error){
+                res.writeHead(200,{'Content-Type':'text/html'});
+                res.write("File Delete Fail");
+                res.end();
+            }
+            else{
+                res.writeHead(200,{'Content-Type':'text/html'});
+                res.write("File Delete Success");
+                res.end();
+            }
 
     }
+
+
 
 
 });
