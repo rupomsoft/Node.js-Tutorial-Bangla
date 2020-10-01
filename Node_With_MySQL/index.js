@@ -10,19 +10,34 @@ con.connect(function (error) {
     }
     else{
         console.log("Connection Success");
-        InsertData(con);
+        //InsertData(con);
+        DeleteDataByID(con)
+
     }
 });
 
 
 function InsertData(con) {
-    let SQLQuery="INSERT INTO `students_list`(`name`, `roll`, `class`, `phone`, `city`) VALUES ('Rabbil','01','Ten','017000000','Dhaka')"
+    let SQLQuery="INSERT INTO `students_list`(`name`, `roll`, `class`, `phone`, `city`) VALUES ('Rabbil','03','Ten','017000000','Dhaka')"
     con.query(SQLQuery,function (error) {
         if(error){
             console.log("Data insert fail");
         }
         else{
             console.log("Data insert success");
+        }
+    })
+}
+
+
+function DeleteDataByID(con) {
+    let SQLQuery="DELETE FROM `students_list` WHERE `id`='2'";
+    con.query(SQLQuery,function (error) {
+        if(error){
+            console.log("Data Delete fail");
+        }
+        else{
+            console.log("Data Delete Success");
         }
     })
 }
