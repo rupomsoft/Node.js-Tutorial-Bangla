@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc64fa24-ae2a-4545-8cc6-a2afdcfb10cc" name="Default Changelist" comment="" />
+    <list default="true" id="063c37dd-e4fb-446c-9a09-79efc198d095" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +36,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1eas2IRPA9lCiK32njDr0BWeQRl" />
+  <component name="ProjectId" id="1hiiBC7ZVkdESI44vauNcUI7L0I" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -45,36 +45,20 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="K:\Node.js-Tutorial-Bangla\fsModule" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fc64fa24-ae2a-4545-8cc6-a2afdcfb10cc" name="Default Changelist" comment="" />
-      <created>1594570830235</created>
+      <changelist id="063c37dd-e4fb-446c-9a09-79efc198d095" name="Default Changelist" comment="" />
+      <created>1600500176589</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1594570830235</updated>
-      <workItem from="1594570832144" duration="3294000" />
-      <workItem from="1597990773551" duration="3847000" />
-      <workItem from="1598012428223" duration="55000" />
-      <workItem from="1600174686176" duration="55000" />
-      <workItem from="1600174749423" duration="4194000" />
-      <workItem from="1600328107468" duration="3626000" />
-      <workItem from="1600368368103" duration="3122000" />
-      <workItem from="1600408205368" duration="3000" />
+      <updated>1600500176589</updated>
+      <workItem from="1600500177859" duration="2588000" />
+      <workItem from="1600539721585" duration="3000" />
     </task>
     <servers />
   </component>
@@ -92,11 +76,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="359" y="123" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600328495322">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="359" y="123" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1600328495322" />
   </component>
 </project>

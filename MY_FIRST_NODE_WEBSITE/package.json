@@ -1,0 +1,13 @@
+{
+  "name": "MY_FIRST_NODE_WEBSITE",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC"
+}
