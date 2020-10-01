@@ -11,7 +11,10 @@ con.connect(function (error) {
     else{
         console.log("Connection Success");
         //InsertData(con);
-        DeleteDataByID(con)
+        //DeleteDataByID(con)
+       UpdateData(con);
+
+
 
     }
 });
@@ -41,6 +44,22 @@ function DeleteDataByID(con) {
         }
     })
 }
+
+
+
+function UpdateData(con) {
+    let SQLQuery="UPDATE `students_list` SET `phone`='11111111111',`city`='Rangpur' WHERE `id`='4'";
+    con.query(SQLQuery,function (error) {
+        if(error){
+            console.log("Data Update fail");
+        }
+        else{
+            console.log("Data Update Success");
+        }
+    })
+}
+
+
 
 
 
