@@ -10,12 +10,10 @@ MongoClient.connect(URL,config,function (error,MyMongoClinet) {
     }
     else{
         console.log("Connection Success");
-      // InsertData(MyMongoClinet);
-       // DeleteOneItem(MyMongoClinet);
 
-
-     DeleleAllItem(MyMongoClinet);
-
+        //InsertData(MyMongoClinet);
+        //DeleteOneItem(MyMongoClinet);
+        //DeleleAllItem(MyMongoClinet);
 
     }
 });
@@ -24,7 +22,7 @@ MongoClient.connect(URL,config,function (error,MyMongoClinet) {
 function InsertData(MyMongoClinet){
    var MyDataBase= MyMongoClinet.db("school");
    var MyCollection= MyDataBase.collection('students');
-   var MyData={name:"Rabbil",Roll:"04",Class:"Ten",City:"Dhaka"};
+   var MyData={name:"Rabbil",Roll:"01",Class:"Ten",City:"Dhaka"};
    MyCollection.insertOne(MyData,function (error) {
        if(error){
            console.log("Data Insert Fail");
@@ -34,8 +32,6 @@ function InsertData(MyMongoClinet){
        }
    })
 }
-
-
 
 function DeleteOneItem(MyMongoClinet) {
     var MyDataBase= MyMongoClinet.db("school");
@@ -51,7 +47,6 @@ function DeleteOneItem(MyMongoClinet) {
     });
 }
 
-
 function DeleleAllItem(MyMongoClinet) {
     var MyDataBase= MyMongoClinet.db("school");
     var MyCollection= MyDataBase.collection('students');
@@ -64,6 +59,8 @@ function DeleleAllItem(MyMongoClinet) {
         }
     })
 }
+
+
 
 
 
