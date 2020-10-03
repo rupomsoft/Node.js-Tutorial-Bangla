@@ -13,7 +13,8 @@ con.connect(function (error) {
         //InsertData(con);
         //DeleteDataByID(con)
        //UpdateData(con);
-        SelectData(con);
+
+
 
     }
 });
@@ -64,12 +65,15 @@ function UpdateData(con) {
 function SelectData(con) {
     let SQLQuery="SELECT * FROM `students_list`";
     con.query(SQLQuery,function (error,result) {
+
         if(error){
             console.log("Data Select Fail")
         }
         else {
             console.log(result)
+
         }
+
     })
 }
 
