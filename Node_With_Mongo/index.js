@@ -1,6 +1,6 @@
 var MongoClient=require('mongodb').MongoClient;
 
-var URL="mongodb+srv://rabbildemo:HbU4xB6HVLq8cRZ2@cluster0.w4qrh.mongodb.net?retryWrites=true&w=majority";
+var URL="mongodb+srv://rabbildemo:HbU4xB6HVLq8cRZ2@cluster0.w4qrh.mongodb.net";
 
 var config= { useUnifiedTopology: true };
 
@@ -27,11 +27,26 @@ MongoClient.connect(URL,config,function (error,MyMongoClinet) {
 
         //FindAllDataByLimit(MyMongoClinet)
 
-        FindAllDataBySort(MyMongoClinet);
+      // FindAllDataBySort(MyMongoClinet);
+
+      //  UpdateMyData(MyMongoClinet);
+
+
+       /// CreateMyCollection(MyMongoClinet)
+
+
+        DeleteMyCollection(MyMongoClinet);
+
 
 
     }
 });
+
+
+
+
+
+
 
 
 function InsertData(MyMongoClinet){
@@ -74,6 +89,8 @@ function DeleleAllItem(MyMongoClinet) {
         }
     })
 }
+
+
 
 
 
@@ -151,4 +168,37 @@ function FindAllDataBySort(MyMongoClinet) {
     MyCollection.find().sort(SortPattern).toArray(function (error,result) {
         console.log(result)
     })
+}
+
+
+
+function UpdateMyData(MyMongoClinet){
+    var MyDataBase= MyMongoClinet.db("school");
+    var MyCollection= MyDataBase.collection('students');
+
+    var MyQuery={Roll:"4"};
+    var MyNewValues={$set:{name:"Rabbil Hasan Rupom",City:"Gaibandha"}}
+
+    MyCollection.updateOne(MyQuery,MyNewValues,function (error,result) {
+        console.log(result);
+    })
+}
+
+
+
+function CreateMyCollection(MyMongoClinet){
+    var MyDataBase= MyMongoClinet.db("school");
+    MyDataBase.createCollection("teachers",function (error,result) {
+        console.log(result);
+    })
+}
+
+
+function DeleteMyCollection(MyMongoClinet){
+    var MyDataBase= MyMongoClinet.db("school");
+
+    MyDataBase.dropCollection("teachers",function (error,result) {
+        console.log(result);
+    })
+
 }
