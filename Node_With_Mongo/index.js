@@ -1,6 +1,6 @@
 var MongoClient=require('mongodb').MongoClient;
 
-var URL="mongodb+srv://rabbildemo:HbU4xB6HVLq8cRZ2@cluster0.w4qrh.mongodb.net";
+var URL="mongodb://127.0.0.1:27017/";
 
 var config= { useUnifiedTopology: true };
 
@@ -11,34 +11,20 @@ MongoClient.connect(URL,config,function (error,MyMongoClinet) {
     else{
         console.log("Connection Success");
 
-        //InsertData(MyMongoClinet);
-        //DeleteOneItem(MyMongoClinet);
+       // InsertData(MyMongoClinet);
+
+        DeleteOneItem(MyMongoClinet);
         //DeleleAllItem(MyMongoClinet);
-
         //FindOneWithoutCondition(MyMongoClinet)
-
         //FindOneWithCondition(MyMongoClinet);
-
-
        // FindAllData(MyMongoClinet)
        // FindAllDataByProjection(MyMongoClinet);
-
        // FindAllDataByQuery(MyMongoClinet)
-
         //FindAllDataByLimit(MyMongoClinet)
-
       // FindAllDataBySort(MyMongoClinet);
-
       //  UpdateMyData(MyMongoClinet);
-
-
-       /// CreateMyCollection(MyMongoClinet)
-
-
-        DeleteMyCollection(MyMongoClinet);
-
-
-
+       // CreateMyCollection(MyMongoClinet)
+       // DeleteMyCollection(MyMongoClinet);
     }
 });
 
@@ -52,7 +38,7 @@ MongoClient.connect(URL,config,function (error,MyMongoClinet) {
 function InsertData(MyMongoClinet){
    var MyDataBase= MyMongoClinet.db("school");
    var MyCollection= MyDataBase.collection('students');
-   var MyData={name:"Rabbil",Roll:"01",Class:"Ten",City:"Dhaka"};
+   var MyData={name:"Rabbil",Roll:"02",Class:"Ten",City:"Dhaka"};
    MyCollection.insertOne(MyData,function (error) {
        if(error){
            console.log("Data Insert Fail");
@@ -62,6 +48,7 @@ function InsertData(MyMongoClinet){
        }
    })
 }
+
 
 function DeleteOneItem(MyMongoClinet) {
     var MyDataBase= MyMongoClinet.db("school");
@@ -90,11 +77,6 @@ function DeleleAllItem(MyMongoClinet) {
     })
 }
 
-
-
-
-
-
 function FindOneWithoutCondition(MyMongoClinet) {
     var MyDataBase= MyMongoClinet.db("school");
     var MyCollection= MyDataBase.collection('students');
@@ -103,7 +85,6 @@ function FindOneWithoutCondition(MyMongoClinet) {
         console.log(result);
     })
 }
-
 
 function FindOneWithCondition(MyMongoClinet) {
     var MyDataBase= MyMongoClinet.db("school");
@@ -114,7 +95,6 @@ function FindOneWithCondition(MyMongoClinet) {
     })
 }
 
-
 function FindAllData(MyMongoClinet) {
     var MyDataBase= MyMongoClinet.db("school");
     var MyCollection= MyDataBase.collection('students');
@@ -122,7 +102,6 @@ function FindAllData(MyMongoClinet) {
         console.log(result)
     })
 }
-
 
 function FindAllDataByProjection(MyMongoClinet) {
     var MyDataBase= MyMongoClinet.db("school");
@@ -147,8 +126,6 @@ function FindAllDataByQuery(MyMongoClinet) {
     })
 }
 
-
-
 function FindAllDataByLimit(MyMongoClinet) {
     var MyDataBase= MyMongoClinet.db("school");
     var MyCollection= MyDataBase.collection('students');
@@ -157,7 +134,6 @@ function FindAllDataByLimit(MyMongoClinet) {
         console.log(result)
     })
 }
-
 
 function FindAllDataBySort(MyMongoClinet) {
     var MyDataBase= MyMongoClinet.db("school");
@@ -169,8 +145,6 @@ function FindAllDataBySort(MyMongoClinet) {
         console.log(result)
     })
 }
-
-
 
 function UpdateMyData(MyMongoClinet){
     var MyDataBase= MyMongoClinet.db("school");
@@ -184,15 +158,12 @@ function UpdateMyData(MyMongoClinet){
     })
 }
 
-
-
 function CreateMyCollection(MyMongoClinet){
     var MyDataBase= MyMongoClinet.db("school");
     MyDataBase.createCollection("teachers",function (error,result) {
         console.log(result);
     })
 }
-
 
 function DeleteMyCollection(MyMongoClinet){
     var MyDataBase= MyMongoClinet.db("school");
